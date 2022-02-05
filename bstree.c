@@ -89,6 +89,7 @@ node_t *delete_node(node_t *ptr){
             fprintf(stderr, "free(p) = %p\n", p);
         }
         ptr->num = p->num;
+        free(p);
         fprintf(stderr, "free(p) = %p\n", p);
     }
     return(ptr);
